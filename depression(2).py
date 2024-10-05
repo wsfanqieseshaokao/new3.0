@@ -1,9 +1,9 @@
 import streamlit as st
-import joblib
 import pandas as pd
+import pickle
 
 # 加载模型
-model = joblib.load('women_depression_rf_model.pkl')
+model = pickle.load(open('women_depression_rf_model.pkl', 'rb'))
 
 # 预测函数
 def make_prediction(model, input_features):
@@ -19,7 +19,6 @@ def make_prediction(model, input_features):
 
 # Streamlit 应用界面
 st.title('Predicting Depression in Adolescent Girls with Non-Suicidal Self-Injury')
-
 
 # 创建输入控件
 age = st.number_input('Age', min_value=10, max_value=18, step=1)
@@ -42,6 +41,7 @@ emotion_regulation = st.number_input('Emotion regulation', min_value=10, max_val
 borderline_personality = st.number_input('Borderline personality', min_value=25, max_value=120, step=1)
 care = st.number_input('Care', min_value=0, max_value=36, step=1)
 overprotection = st.number_input('Overprotection', min_value=0, max_value=36, step=1)
+
 # 当用户点击预测按钮时，显示预测结果
 if st.button('预测'):
     # 创建输入特征列表
