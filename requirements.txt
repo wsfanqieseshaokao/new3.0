@@ -214,7 +214,7 @@ numpy==1.23.5
 numpy-base==1.23.5
 numpydoc==1.5.0
 openjpeg==2.4.0
-openssl==1.1.1t
+openssl==1.1.1
 packaging==22.0
 pandocfilters==1.5.0
 panel==0.14.3
