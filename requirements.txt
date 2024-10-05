@@ -1,3 +1,4 @@
+scikit-learn
 setuptools==74.1.2
 joblib==1.1.1
 altair==5.4.1
